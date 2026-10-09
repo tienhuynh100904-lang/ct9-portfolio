@@ -19,7 +19,7 @@ export const profile = {
     {
       key: "linkedin",
       label: "LinkedIn",
-      href: "https://www.linkedin.com/in/hu%E1%BB%B3nh-c%C3%B4ng-ti%E1%BA%BFn-hu%E1%BB%B3nh-c%C3%B4ng-ti%E1%BA%BFn-79a335377/",
+      href: "linkedin.com/in/huỳnh-công-tiến-79a335377",
       handle: "Huỳnh Công Tiến",
     },
     { key: "facebook", label: "Facebook", href: "https://www.facebook.com/CT9Titanium", handle: "CT9Titanium" },

@@ -14,7 +14,7 @@ Set `NEXT_PUBLIC_SITE_URL` to the deployed domain so social-share previews resol
 
 ## Editing content
 
-All text, projects, skills, activities and links live in [`lib/content.ts`](lib/content.ts) — every string has an `en` and `vi` version.
+All text, experience, projects, skills, activities and links live in [`lib/content.ts`](lib/content.ts) — every string has an `en` and `vi` version.
 
 | What | Where |
 | --- | --- |
@@ -27,7 +27,7 @@ All text, projects, skills, activities and links live in [`lib/content.ts`](lib/
 ## Structure
 
 - `app/` — layout, page, global styles (design tokens in `globals.css`)
-- `components/sections/` — Navbar, Hero, TechMarquee, About, Skills, Projects (+ modal / mock-ups), Journey, Contact, Footer
+- `components/sections/` — Navbar, Hero, TechMarquee, About, Experience, Skills, Projects (+ modal / mock-ups), Journey, Contact, Footer
 - `components/effects/` — preloader, custom cursor, interactive hero canvas, scroll progress, grain
 - `components/ui/` — reusable primitives (reveal animations, magnetic button, spotlight card, lightbox, counter)
 - `lib/` — content, i18n, hooks, scroll lock

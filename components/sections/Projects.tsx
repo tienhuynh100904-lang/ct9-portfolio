@@ -22,7 +22,7 @@ export function Projects() {
   return (
     <section id="work" className="relative pt-20 md:pt-28 lg:pt-40">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
-        <SectionHeading index="03" label={t(ui.workLabel)} title={t(ui.workTitle)} intro={t(ui.workIntro)} className="lg:mb-4" />
+        <SectionHeading index="04" label={t(ui.workLabel)} title={t(ui.workTitle)} intro={t(ui.workIntro)} className="lg:mb-4" />
 
         <div ref={stackRef} className="relative flex flex-col gap-6 pb-10 lg:gap-0 lg:pb-[12vh]">
           {projects.map((project, i) => (

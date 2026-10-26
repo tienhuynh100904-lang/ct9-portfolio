@@ -76,17 +76,6 @@ export function Hero() {
 
       <div className="mx-auto grid w-full max-w-7xl items-center gap-12 px-5 md:grid-cols-[1.15fr_0.85fr] md:gap-6 md:px-8 lg:grid-cols-[1.12fr_0.88fr] lg:gap-8">
         <motion.div style={{ y: contentY, opacity: contentOpacity }} className="relative z-10">
-          <motion.div variants={fadeUp} initial="hidden" animate={state} custom={0.1}>
-            <span className="inline-flex items-center gap-2.5 rounded-full border border-volt/25 bg-volt/[0.06] py-1.5 pl-2.5 pr-4 text-xs font-medium text-volt sm:text-sm">
-              <span className="relative flex size-2">
-                <span className="animate-ping-soft absolute inline-flex size-full rounded-full bg-volt" />
-                <span className="relative inline-flex size-2 rounded-full bg-volt" />
-              </span>
-              {t(ui.openToWork)}
-              <span className="hidden text-volt/60 sm:inline md:hidden lg:inline">· {t(profile.location)}</span>
-            </span>
-          </motion.div>
-
           <motion.p
             variants={fadeUp}
             initial="hidden"

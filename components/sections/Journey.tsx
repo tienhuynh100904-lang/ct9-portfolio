@@ -21,7 +21,7 @@ export function Journey() {
   const onOpen = (activity: Activity, index: number) => setOpen({ activity, index });
 
   const heading = (
-    <SectionHeading index="04" label={t(ui.journeyLabel)} title={t(ui.journeyTitle)} compact />
+    <SectionHeading index="05" label={t(ui.journeyLabel)} title={t(ui.journeyTitle)} compact />
   );
 
   return (

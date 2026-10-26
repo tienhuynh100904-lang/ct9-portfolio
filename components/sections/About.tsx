@@ -77,7 +77,7 @@ export function About() {
                     <h3 className="mt-6 font-display text-lg font-medium lg:mt-10">{t(s.title)}</h3>
                     <p className="mt-3 text-sm leading-relaxed text-muted">{t(s.desc)}</p>
                     <ul className="mt-6 flex flex-wrap gap-1.5">
-                      {s.tags.map((tag) => (
+                      {t(s.tags).map((tag) => (
                         <li key={tag} className="rounded-full bg-white/[0.04] px-2.5 py-1 font-mono text-[11px] text-fg/70">
                           {tag}
                         </li>

@@ -9,13 +9,13 @@ import { skillGroups, softSkills, ui } from "@/lib/content";
 import { useLang } from "@/lib/i18n";
 import { cn, EASE_OUT } from "@/lib/utils";
 
-// Mobile: even rows (4 / 3 / 2 / 4 per row). Tablet: 8-item groups span the full width in one row,
-// languages + databases sit side by side. Desktop: the 12-column bento.
+// Mobile: even rows (4 / 3 / 3 / 3 per row). Tablet: frameworks + tools span the full width in one row,
+// languages + databases sit side by side. Desktop: the 12-column bento; databases + tools share three rows.
 const layout: Record<string, { span: string; cols: string }> = {
   frameworks: { span: "md:col-span-2 lg:col-span-7", cols: "grid-cols-4 md:grid-cols-8 lg:grid-cols-4" },
   languages: { span: "lg:col-span-5", cols: "grid-cols-3" },
-  databases: { span: "lg:col-span-5", cols: "grid-cols-2 sm:grid-cols-4 md:grid-cols-2" },
-  tools: { span: "md:col-span-2 lg:col-span-7", cols: "grid-cols-4 md:grid-cols-8 lg:grid-cols-4" },
+  databases: { span: "lg:col-span-5", cols: "grid-cols-3 sm:grid-cols-6 md:grid-cols-3 lg:grid-cols-2" },
+  tools: { span: "md:col-span-2 lg:col-span-7", cols: "grid-cols-3 md:grid-cols-9 lg:grid-cols-3" },
 };
 
 const list: Variants = { hidden: {}, show: { transition: { staggerChildren: 0.05, delayChildren: 0.15 } } };
@@ -34,7 +34,7 @@ export function Skills() {
         className="bg-grid absolute inset-0 -z-10 [mask-image:radial-gradient(ellipse_70%_60%_at_50%_40%,#000,transparent)]"
       />
       <div className="mx-auto max-w-7xl px-5 md:px-8">
-        <SectionHeading index="02" label={t(ui.skillsLabel)} title={t(ui.skillsTitle)} intro={t(ui.skillsIntro)} />
+        <SectionHeading index="03" label={t(ui.skillsLabel)} title={t(ui.skillsTitle)} intro={t(ui.skillsIntro)} />
 
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-12">
           {skillGroups.map((group, gi) => (

@@ -59,7 +59,8 @@ export function Navbar() {
               <span className="relative size-10 overflow-hidden rounded-xl ring-1 ring-white/10 transition duration-500 group-hover:rotate-[-8deg] group-hover:ring-volt/60">
                 <Image src="/images/Logo_Portfolio.png" alt="" fill sizes="40px" className="object-cover" />
               </span>
-              <span className="hidden font-display text-sm font-medium leading-tight sm:block">
+              {/* Hidden at lg, where the seven nav links need the room. */}
+              <span className="hidden font-display text-sm font-medium leading-tight sm:block lg:hidden xl:block">
                 {t(profile.name)}
                 <span className="block font-mono text-[10px] font-normal uppercase tracking-[0.2em] text-muted">Developer</span>
               </span>
@@ -72,7 +73,7 @@ export function Navbar() {
                     <a
                       href={`#${item.id}`}
                       className={cn(
-                        "relative block rounded-full px-4 py-2 text-sm transition-colors duration-300",
+                        "relative block whitespace-nowrap rounded-full px-3 py-2 text-sm transition-colors duration-300 xl:px-4",
                         active === item.id ? "text-black" : "text-muted hover:text-fg",
                       )}
                     >

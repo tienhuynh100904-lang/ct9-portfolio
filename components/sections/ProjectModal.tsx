@@ -160,32 +160,34 @@ function ModalView({ project, onClose, onNavigate }: Props & { project: Project 
                   </motion.div>
                 </div>
 
-                <motion.section variants={item} custom={6}>
-                  <div className="flex items-baseline justify-between">
-                    <h3 className="font-mono text-[11px] uppercase tracking-[0.25em] text-muted">{t(ui.gallery)}</h3>
-                    <span className="font-mono text-xs text-subtle">{String(gallery.length).padStart(2, "0")}</span>
-                  </div>
-                  <div className="mt-5 columns-2 gap-3 md:columns-3">
-                    {project.gallery.map((shot, i) => (
-                      <button
-                        key={shot.src}
-                        type="button"
-                        data-cursor="Zoom"
-                        onClick={() => setLightbox(i)}
-                        className="group mb-3 block w-full break-inside-avoid overflow-hidden rounded-xl border border-white/10 bg-surface"
-                      >
-                        <Image
-                          src={shot.src}
-                          alt={`${t(project.title)} — ${i + 1}`}
-                          width={shot.w}
-                          height={shot.h}
-                          sizes="(min-width: 768px) 280px, 45vw"
-                          className="h-auto w-full transition duration-700 group-hover:scale-105"
-                        />
-                      </button>
-                    ))}
-                  </div>
-                </motion.section>
+                {gallery.length > 0 && (
+                  <motion.section variants={item} custom={6}>
+                    <div className="flex items-baseline justify-between">
+                      <h3 className="font-mono text-[11px] uppercase tracking-[0.25em] text-muted">{t(ui.gallery)}</h3>
+                      <span className="font-mono text-xs text-subtle">{String(gallery.length).padStart(2, "0")}</span>
+                    </div>
+                    <div className="mt-5 columns-2 gap-3 md:columns-3">
+                      {project.gallery.map((shot, i) => (
+                        <button
+                          key={shot.src}
+                          type="button"
+                          data-cursor="Zoom"
+                          onClick={() => setLightbox(i)}
+                          className="group mb-3 block w-full break-inside-avoid overflow-hidden rounded-xl border border-white/10 bg-surface"
+                        >
+                          <Image
+                            src={shot.src}
+                            alt={`${t(project.title)} — ${i + 1}`}
+                            width={shot.w}
+                            height={shot.h}
+                            sizes="(min-width: 768px) 280px, 45vw"
+                            className="h-auto w-full transition duration-700 group-hover:scale-105"
+                          />
+                        </button>
+                      ))}
+                    </div>
+                  </motion.section>
+                )}
 
                 {(project.repo || project.demo) && (
                   <motion.div variants={item} custom={7} className="flex flex-wrap gap-3">

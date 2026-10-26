@@ -3,6 +3,7 @@ import { CustomCursor } from "@/components/effects/CustomCursor";
 import { Preloader } from "@/components/effects/Preloader";
 import { About } from "@/components/sections/About";
 import { Contact } from "@/components/sections/Contact";
+import { Experience } from "@/components/sections/Experience";
 import { Footer } from "@/components/sections/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { Journey } from "@/components/sections/Journey";
@@ -23,6 +24,7 @@ export default function Home() {
         <Hero />
         <TechMarquee />
         <About />
+        <Experience />
         <Skills />
         <Projects />
         <Journey />

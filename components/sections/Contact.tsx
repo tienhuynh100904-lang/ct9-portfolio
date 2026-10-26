@@ -20,7 +20,7 @@ export function Contact() {
     <section id="contact" className="relative overflow-hidden pb-16 pt-20 md:pb-24 md:pt-28 lg:pb-28 lg:pt-40">
       <div aria-hidden="true" className="absolute bottom-0 left-1/2 -z-10 h-[520px] w-[900px] -translate-x-1/2 translate-y-1/2 rounded-full bg-volt/[0.12] blur-[140px]" />
       <div className="mx-auto max-w-7xl px-5 md:px-8">
-        <SectionLabel index="05" label={t(ui.contactLabel)} />
+        <SectionLabel index="06" label={t(ui.contactLabel)} />
 
         <h2
           className={cn(
